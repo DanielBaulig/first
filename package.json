@@ -1,0 +1,26 @@
+{ "name": "first",
+  "description": "A tiny control-flow library for node",
+  "author": "Daniel Baulig <daniel.baulig@gmx.de>",
+  "version": "0.0.1",
+  "keywords": [
+    "flow-control", "async", "callback", "asynchronous"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/DanielBaulig/first.git"
+  },
+  "bugs": {
+    "web": "http://github.com/DanielBaulig/first/issues"
+  },
+  "license": {
+    "type": "MIT",
+    "url": "http://github.com/DanielBaulig/first/raw/master/LICENSE"
+  },
+  "devDependencies": {
+    "nodeunit": "0.5.3"
+  },
+  "folders": {
+    "lib": "./lib"
+  },
+  "main": "./lib/first.js"
+}
