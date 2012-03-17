@@ -1,7 +1,7 @@
 { "name": "first",
   "description": "A tiny control-flow library for node",
   "author": "Daniel Baulig <daniel.baulig@gmx.de>",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "keywords": [
     "flow-control", "async", "callback", "asynchronous"
   ],
