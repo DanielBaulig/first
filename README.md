@@ -8,11 +8,14 @@ Example:
 
     first(function() {
       fs.readFile('json-data', this);
-    }).whilst(function () {
+    }).
+    whilst(function () {
       templates.compile('a-template', this);
-    }).then(function (json, template) {
+    }).
+    then(function (json, template) {
       template[0].render(json[0], this);
-    }).then(function (html) {
+    }).
+    then(function (html) {
       console.log(html);
     });
 
@@ -38,7 +41,8 @@ Example:
     first(function() {
       // first do something
       this();
-    }).then(function () {
+    }).
+    then(function () {
       // then do something else
     });
 
@@ -47,13 +51,16 @@ Example:
     first(function () {
       // first do something
       this();
-    }).then(function () {
+    }).
+    then(function () {
       // then do (parallel) job A
       this();
-    }).whilst(function () {
+    }).
+    whilst(function () {
       // whilst doing (parallel) job B
       this();
-    }).then(function () {
+    }).
+    then(function () {
       // then do something after A + B finished
     });
 
@@ -62,7 +69,8 @@ Example:
     first(function () {
       // first do something yielding a result
       this(result);
-    }).then(function (result) {
+    }).
+    then(function (result) {
       // then do something with result
     });
 
@@ -71,10 +79,12 @@ Example:
     first(function () {
       // first do something yielding err and result
       this(err, result);
-    }).whilst(function () {
+    }).
+    whilst(function () {
       // whilst doing something that yields 'Hello, World!'
       this('Hello, World!');
-    }).then(function (function1, function2) {
+    }).
+    then(function (function1, function2) {
       // then do something with those results
       // function1[0] === err, function1[1] === result 
       // function2[0] === 'Hello, World!'
