@@ -29,6 +29,7 @@ Example:
   * [Sequential & Parallel](#seqandpar)
   * [Sequence Parameters](#parameters)
   * [Ordered Parallel Paramters](#parpar)
+  * [Batch Callbacks](#batch)
   * [Unit Tests](#tests)
 
 ## <a name="small" />Small
@@ -88,6 +89,31 @@ Example:
       // then do something with those results
       // function1[0] === err, function1[1] === result 
       // function2[0] === 'Hello, World!'
+    });
+
+## <a name="batch" />Batch Callbacks
+
+    first(function () {
+      // first do something
+      this();
+    }).
+    then(function () {
+      // then do something else
+      this();
+    }, function {
+      // then do something else
+      this();
+    }).
+    then(function () {
+      // then do something else
+      this();
+    }).
+    whilst(function () {
+      // whilst doing something else
+      this();
+    }, function () {
+      // whilst doing something else
+      this();
     });
 
 ## <a name="tests" />Unit Tests
