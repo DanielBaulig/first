@@ -106,3 +106,41 @@ exports.testFlow = function (t) {
     t.done();
   });
 };
+
+exports.testBatch = function (t) {
+  t.expect(14);
+  var n = 0;
+  first(function() {
+    t.equal(++n, 1);
+    this();
+  }).then(function() {
+    t.ok(++n > 1);
+    t.ok(n < 4);
+    this(); 
+  }).whilst(function() {
+    t.ok(++n > 1);
+    t.ok(n < 4);
+    this();
+  }).then(function() {
+    t.equal(++n, 4);
+    this();
+  }, function() {
+    t.equal(++n, 5);  
+    this();
+  }).then(function() {
+    t.ok(++n > 5);
+    t.ok(n < 9);
+    this();
+  }).whilst(function() {
+    t.ok(++n > 5);
+    t.ok(n < 9);
+    this();
+  }, function () {
+    t.ok(++n > 5);
+    t.ok(n < 9);
+    this();
+  }).then(function () {
+    t.equal(++n, 9);
+    t.done();
+  });
+};
