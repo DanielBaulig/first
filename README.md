@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/DanielBaulig/first.png)](http://travis-ci.org/DanielBaulig/first)
 # _first_
 
 first is a flow-control library for node. It provides a clean and easy to use interface for sequentializing and parallelizing asynchronous functions.
